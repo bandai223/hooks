@@ -23,33 +23,42 @@ function App() {
         setTotalPrice(totalPrice + product1);
       }}>Add to cart</button>
       <button onClick={()=>{
-        setTotalItems(totalItems - 1);
-        setTotalPrice(totalPrice - product1);
-      }}>Remove from cart</button>
+        if (totalItems > 0) {
+          setTotalItems(totalItems - 1);
+          setTotalPrice(totalPrice - product1);
+        }
+      }}
+      >Remove from cart</button>
       <div>
         <img scr="supra-grmn.jpg" alt="grsupra" width="15%" /><br />
         Toyota GR Supra {product2} USD
       </div>
       <button onClick={()=>{
         setTotalItems(totalItems + 1);
-        setTotalPrice(totalPrice + product1);
+        setTotalPrice(totalPrice + product2);
       }}>Add to cart</button>
       <button onClick={()=>{
-        setTotalItems(totalItems - 1);
-        setTotalPrice(totalPrice - product1);
-      }}>Remove from cart</button>
+        if (totalItems > 0) {
+          setTotalItems(totalItems - 1);
+          setTotalPrice(totalPrice - product2);
+        }
+      }}
+      >Remove from cart</button>
       <div>
         <img scr="900-rocket-r.jpg" alt="bb911" width="15%" /><br />
         BRABUS 900 Rocket R {product3} USD
       </div>
       <button onClick={()=>{
         setTotalItems(totalItems + 1);
-        setTotalPrice(totalPrice + product1);
+        setTotalPrice(totalPrice + product3);
       }}>Add to cart</button>
       <button onClick={()=>{
-        setTotalItems(totalItems - 1);
-        setTotalPrice(totalPrice - product1);
-      }}>Remove from cart</button>
+        if (totalItems > 0) {
+          setTotalItems(totalItems - 1);
+          setTotalPrice(totalPrice - product3);
+        }
+      }}
+      >Remove from cart</button>
     </div>
   );
 }
